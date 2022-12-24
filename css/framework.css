@@ -1,0 +1,32 @@
+.d-flex {
+  display: flex; 
+}
+.between-flex {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center;
+}
+.d-grid {
+  display: grid; 
+}
+/* Start Colors */
+.bg-fff {
+  background-color: #fff;
+}
+.bg-000 {
+  background-color: #000;
+}
+/* End Colors */
+/* Start Position */
+.p-relative {
+  position: relative;
+}
+.p-absolute {
+  position: absolute;
+}
+/* End Position */
+
+
+
+
+
