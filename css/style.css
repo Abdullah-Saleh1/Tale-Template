@@ -111,6 +111,11 @@ body {
     max-width: 960px;
   }
 }
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px; 
+  }
+}
 img {
   max-width: 100%; 
   display: block; 
@@ -123,7 +128,9 @@ i::before {
 }
 a {
   text-decoration: none; 
+  color: var(--link-color);
 }
+
 /* End Global Rules */
 /* Start Header */
 .pre-header {
@@ -178,7 +185,7 @@ header .container > ul.d-flex {
   height: 100%;
 }
 header .container > ul > li {
-  padding: 0 10px;
+  padding: 0 30px;
   display: grid; 
   place-items: center; 
   height: 100%;
@@ -243,20 +250,98 @@ header ul li .menu a:hover {
 }
 /* End Header */
 /* Start Landing */
+.landing {
+  height: calc(100vh - 57px - 110px); 
+  overflow: hidden; 
+}
 .landing::before, 
 .landing::after {
   position: absolute; 
-  top: 0; 
   height: 100%; 
   z-index: -1;
 }
 .landing::before {
   content: url(../images/banner-left.png);
   left: 0; 
+  top: -105px; 
 }
 .landing::after {
   content: url(../images/banner-right.png);
   right: 0; 
+  top: -115px; 
+}
+.landing .box {
+  max-width: 750px;
+  padding: 3.5rem;
+  border-radius: 15px;
+  margin-top: 100px;
+  box-shadow: 0 5px 43px -10px rgb(0 0 0 / 20%);
+  background-color: rgba(255, 255, 255, .4);
+  opacity: 0; 
+  transform: translateY(30px);
+  animation: go-up 2s ease-in-out .5s forwards; 
+}
+@keyframes go-up {
+  to {
+    opacity: 1; 
+    transform: translateY(0)
+  }
+}
+.landing .box > span:first-child {
+  font-size: 20px;
+  font-weight: bold;
+  color: #5b03e4;
+  padding: 0 0 30px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #decdfa;
+}
+.landing .box > h2 {
+  font-size: 52px; 
+  line-height: 70px; 
+  color: #2a2a2a; 
+  margin-bottom: 20px; 
+}
+.landing .box > h2 span:first-of-type {
+  color: #5b03e4;
+}
+.landing .box > h2 span:last-of-type {
+  color: #c03afe;
+}
+.landing .box > p {
+  color: #afafaf; 
+  line-height: 30px; 
+  margin-bottom: 30px; 
+  font-size: 15px; 
+  /* To Force It To Take 75% Width Of The Parent */
+  padding-right: 25%;
+}
+.landing .box p a:hover {
+  color: var(--link-hover-color);
+}
+.landing .box .between-flex {
+  gap: 3.5rem;
+}
+.landing .box .between-flex > a {
+  color: #fff; 
+  border-radius: 25px; 
+  padding: 12px 30px;
+  font-size: 14px;
+  transition: .3s;
+  letter-spacing: .5px; 
+}
+.landing .box .between-flex > a:nth-child(1) {
+  background-color: #5b03e4;
+}
+.landing .box .between-flex > a:nth-child(2) {
+  background-color: #c03afe;
+}
+.landing .box .between-flex > a:hover {
+  opacity: .8;
+}
+.landing .box .between-flex > span {
+  left: 50%; 
+  top: 70%; 
+  transform: translateX(-50%)
 }
 /* End Landing */
 

@@ -9,6 +9,9 @@
 .d-grid {
   display: grid; 
 }
+.d-block {
+  display: block; 
+}
 /* Start Colors */
 .bg-fff {
   background-color: #fff;
@@ -25,8 +28,20 @@
   position: absolute;
 }
 /* End Position */
-
-
+/* Start Width + Height */
+.w-fit {
+  width: fit-content; 
+}
+.h-fit {
+  height: fit-content;
+}
+.w-full {
+  width: 100%; 
+}
+.h-full {
+  height: 100%; 
+}
+/* End Width + Height */
 
 
 
