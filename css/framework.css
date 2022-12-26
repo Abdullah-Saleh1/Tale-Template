@@ -28,6 +28,11 @@
   position: absolute;
 }
 /* End Position */
+/* Start Font */
+.txt-c {
+  text-align: center;
+}
+/* End Font */
 /* Start Width + Height */
 .w-fit {
   width: fit-content; 
@@ -42,6 +47,12 @@
   height: 100%; 
 }
 /* End Width + Height */
-
+/* Start Mobile */
+@media (max-width: 767px) {
+  .hidden-mobile {
+    display: none; 
+  }
+}
+/* End Mobile */
 
 
