@@ -1,6 +1,12 @@
 .d-flex {
   display: flex; 
 }
+.justify-center {
+  justify-content: center;
+}
+.align-center {
+  align-items: center; 
+}
 .between-flex {
   display: flex; 
   justify-content: space-between; 
@@ -8,6 +14,9 @@
 }
 .d-grid {
   display: grid; 
+}
+.gap-5 {
+  gap: 5px;
 }
 .d-block {
   display: block; 
@@ -51,6 +60,11 @@
 @media (max-width: 767px) {
   .hidden-mobile {
     display: none; 
+  }
+}
+@media (max-width: 767px) {
+  .txt-c-mobile {
+    text-align: center; 
   }
 }
 /* End Mobile */

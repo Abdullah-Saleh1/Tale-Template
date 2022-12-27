@@ -111,6 +111,11 @@ body {
     max-width: 960px;
   }
 }
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px; 
+  }
+}
 @media (min-width: 1400px) {
   .container {
     max-width: 1320px; 
@@ -135,6 +140,7 @@ a {
 /* Start Header */
 .pre-header {
   height: 57px; 
+  background-color: #fff;
 }
 .pre-header .container {
   padding: 15px 0;
@@ -190,6 +196,11 @@ header .container > ul > li {
   place-items: center; 
   height: 100%;
   cursor: pointer
+}
+@media (max-width: 992px) {
+  header .container > ul > li {
+    padding: 0 10px;
+  }
 }
 header ul li:nth-child(4) {
   padding: 0 30px 0 10px;
@@ -280,6 +291,14 @@ header ul li .menu a:hover {
   transform: translateY(30px);
   animation: go-up 2s ease-in-out .5s forwards; 
 }
+@media (min-width: 1400px) {
+  .landing .box {
+    background-color: transparent; 
+    box-shadow: none; 
+    padding: 0; 
+    margin-top: 150px;   
+  }
+}
 @keyframes go-up {
   to {
     opacity: 1; 
@@ -300,6 +319,7 @@ header ul li .menu a:hover {
   color: #2a2a2a; 
   margin-bottom: 20px; 
 }
+
 .landing .box > h2 span:first-of-type {
   color: #5b03e4;
 }
@@ -319,6 +339,19 @@ header ul li .menu a:hover {
 }
 .landing .box .between-flex {
   gap: 3.5rem;
+}
+@media (max-width: 992px) {
+  .landing .box > span:first-child {
+    margin: 0 auto 20px;
+  }
+  /* I'm using :is psuedo class to give more specificity to overriding padding-right */
+  .landing .box > :is(h2, p) {
+    text-align: center; 
+    padding-right: 0;
+  }
+  .landing .box .between-flex {
+    margin: auto;
+  }
 }
 .landing .box .between-flex > a {
   color: #fff; 
