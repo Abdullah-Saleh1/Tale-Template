@@ -58,7 +58,7 @@
 /* End Width + Height */
 /* Start Mobile */
 @media (max-width: 767px) {
-  .hidden-mobile {
+  .hide-mobile {
     display: none; 
   }
 }
