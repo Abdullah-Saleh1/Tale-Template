@@ -86,4 +86,11 @@
 .index-1 {
   z-index: 1;
 }
+/* Start Maring + Padding*/
+.m-auto {
+  margin: auto; 
+}
+/* End Maring + Padding */
+
+
 

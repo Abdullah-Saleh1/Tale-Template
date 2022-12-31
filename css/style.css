@@ -80,16 +80,34 @@
 html {
   scroll-behavior: smooth; 
 }
+a {
+  scroll-behavior: smooth;
+}
 body {
+  scroll-behavior: smooth; 
   font-family: 'Open Sans', sans-serif;
   font-weight: var(--body-color);
   font-size: var(--body-font-size);
   background-color: var(--body-bg); 
   line-height: var(--body-line-height);
-  overflow: hidden;
+}
+::-webkit-scrollbar {
+  width: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #6610f2;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #5b03e4;
+
 }
 .page {
+  position: relative; 
   overflow-x: hidden;
+  height: 100vh; 
   min-height: 100vh; 
 }
 .container {
@@ -373,8 +391,7 @@ header ul li .menu a {
 /* End Header */
 /* Start Landing */
 .landing {
-  height: calc(100vh - 57px - 110px);
-  padding-block-start: clamp(3rem, 12vw, 8rem); 
+  padding-block: clamp(3rem, 12vw, 8rem); 
 }
 .landing::before, 
 .landing::after {
@@ -394,7 +411,7 @@ header ul li .menu a {
 }
 .landing .box {
   max-width: 750px;
-  padding: 3.5rem;
+  padding: clamp(1rem, 5vw, 3.5rem);
   border-radius: 15px;
   box-shadow: 0 5px 43px -10px rgb(0 0 0 / 20%);
   background-color: rgba(255, 255, 255, .9);
@@ -402,17 +419,16 @@ header ul li .menu a {
   transform: translateY(30px);
   animation: go-up 2s ease-in-out .5s forwards; 
 }
+@media (max-width: 767px) {
+  .landing .box {
+    padding: 1rem;
+  }
+}
 @media (min-width: 1400px) {
   .landing .box {
     background-color: transparent; 
     box-shadow: none; 
     padding: 0; 
-  }
-}
-@keyframes go-up {
-  to {
-    opacity: 1; 
-    transform: translateY(0)
   }
 }
 .landing .box > span:first-child {
@@ -429,7 +445,6 @@ header ul li .menu a {
   color: #2a2a2a; 
   margin-bottom: 20px; 
 }
-
 .landing .box > h2 span:first-of-type {
   color: #5b03e4;
 }
@@ -486,4 +501,11 @@ header ul li .menu a {
   transform: translateX(-50%)
 }
 /* End Landing */
-
+/* Start Animations */
+@keyframes go-up {
+  to {
+    opacity: 1; 
+    transform: translateY(0)
+  }
+}
+/* End Animations */
