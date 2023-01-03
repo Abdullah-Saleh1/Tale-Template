@@ -18,10 +18,10 @@
 </head>
 
 <body>
-  <div class="page">
+  <div class="page p-relative">
     <!-- Start Header -->
     <main id="top">
-      <div class="pre-header hide-mobile">
+      <div class="pre-header hide-mobile bg-fff">
         <div class="container between-flex">
           <div class="head-contact d-flex bg-fff">
             <a href="#">
@@ -52,20 +52,18 @@
       <div class="container between-flex p-relative">
         <img src="images/logo.png" alt="">
         <input type="checkbox" id="burger-icon" class="d-none">
-        <label class="" for="burger-icon">
-          <span></span>
-          <span></span>
-          <span></span>
+        <label class="p-relative" for="burger-icon">
+          <span class="p-absolute bg-fff w-full"></span>
         </label>
-        <ul class="d-flex">
+        <ul class="d-flex h-full">
           <li><a href="#top">Home</a></li>
           <li><a href="#services">Services</a></li>
-          <li><a href="#">Projects</a></li>
+          <li><a href="#projects">Projects</a></li>
           <li class="p-relative">
             <input type="checkbox" id="drop-menu" class="d-none">
             <label for="drop-menu" class="w-full h-full center-flex">
               <!-- <a href="#" id="">Pages <i class="fa-solid fa-chevron-down"></i></a> -->
-              <span>Pages <i class="fa-solid fa-chevron-down"></i></span>
+              <span>Pages <i class="fa-solid fa-chevron-down fs-12"></i></span>
               <div class="menu">
                 <ul>
                   <li><a href="#">About Us</a></li>
@@ -74,8 +72,8 @@
               </div>
             </label>
           </li>
-          <li class="index-1"><a href="#">Infos</a></li>
-          <li class="index-1"><a href="#">Contact</a></li>
+          <li class="index-1"><a href="#infos">Infos</a></li>
+          <li class="index-1"><a href="#contact">Contact</a></li>
         </ul>
       </div>
     </header>
@@ -84,16 +82,18 @@
     <div class="landing p-relative">
       <div class="container">
         <div class="box">
-          <span class="d-block w-fit">SEO DIGITAL AGENCY</span>
-          <h2>Dive <span>Into The SEO</span> World <span>With Tale</span></h2>
-          <p>
+          <span class="d-block w-fit c-primary">SEO DIGITAL AGENCY</span>
+          <h2 class="c-dark">Dive <span class="c-primary">Into The SEO</span> World <span class="c-second-primary">With
+              Tale</span></h2>
+          <p class="c-gray">
             Tale is the best SEO agency website template using Bootstrap v5.2.2 CSS for your zcompany. It is a free
             download
-            provided by TemplateMo. There are 3 HTML pages, <a href="#">Home</a>, <a href="#">About</a>, and <a href="#">FAQ</a>.
+            provided by TemplateMo. There are 3 HTML pages, <a href="#">Home</a>, <a href="#">About</a>, and <a
+              href="#">FAQ</a>.
           </p>
           <div class="between-flex p-relative w-fit">
-            <a href="#" class="d-block">Discover More</a>
-            <a href="#" class="d-block">Check Our FAQs</a>
+            <a href="#" class="d-block bg-primary c-fff">Discover More</a>
+            <a href="#" class="d-block bg-second-primary c-fff">Check Our FAQs</a>
             <span class="p-absolute">or</span>
           </div>
         </div>
@@ -104,30 +104,82 @@
     <div class="services p-relative" id="services">
       <div class="container d-flex">
         <div class="content">
-          <h2 class="p-relative">We Provide <span>Different Services</span> & <span>Features</span> For Your Agency</h2>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod.</p>
-          <div class="grid">
-            <div class="box">
-              <img src="images/services-01.jpg" alt="">
-              <h3>Discover More on current SEO Trends</h3>
+          <h2 class="p-relative c-dark">We Provide <span class="c-primary">Different Services</span> & <span
+              class="c-second-primary">Features</span> For Your Agency</h2>
+          <p class="c-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod.</p>
+          <div class="grid d-grid">
+            <div class="box bg-fff rad-25 box-border">
+              <img class="rad-50" src="images/services-01.jpg" alt="">
+              <h3 class="c-dark">Discover More on current SEO Trends</h3>
             </div>
-            <div class="box">
-              <img src="images/services-02.jpg" alt="">
-              <h3>Real-Time Big Data Analysis</h3>
+            <div class="box bg-fff rad-25 box-border">
+              <img class="rad-50" src="images/services-02.jpg" alt="">
+              <h3 class="c-dark">Real-Time Big Data Analysis</h3>
             </div>
-            <div class="box">
-              <img src="images/services-03.jpg" alt="">
-              <h3>Precise Data Analysis & Prediction</h3>
+            <div class="box bg-fff rad-25 box-border">
+              <img class="rad-50" src="images/services-03.jpg" alt="">
+              <h3 class="c-dark">Precise Data Analysis & Prediction</h3>
             </div>
-            <div class="box">
-              <img src="images/services-04.jpg" alt="">
-              <h3>SEO Marketing & Social Media</h3>
+            <div class="box bg-fff rad-25 box-border">
+              <img class="rad-50" src="images/services-04.jpg" alt="">
+              <h3 class="c-dark">SEO Marketing & Social Media</h3>
             </div>
           </div>
         </div>
       </div>
     </div>
     <!-- End Services -->
+    <!-- Start Projects -->
+    <div class="projects" id="projects">
+      <div class="container">
+        <div class="info p-relative">
+          <h2 class="p-relative c-dark">Discover Our <span class="c-primary">Work</span> & <span class="c-second-primary">Projects</span></h2>
+          <p class="c-gray">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod.</p>
+          <div class="chevrons p-absolute">
+            <i class="fa-solid fa-chevron-left rad-50 bg-second-primary c-fff center-flex"></i>
+            <i class="fa-solid fa-chevron-right rad-50 bg-second-primary c-fff center-flex"></i>
+          </div>
+        </div>
+      </div>
+      <div class="images d-flex">
+        <div class="box bg-fff">
+          <img src="images/projects-02.jpg" alt="">
+          <div class="down-content box-border">
+            <h3 class="c-dark">Bootstrap 5 Themes For Free</h3>
+            <a href="#"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+        <div class="box bg-fff">
+          <img src="images/projects-03.jpg" alt="">
+          <div class="down-content box-border">
+            <h3 class="c-dark">Mobile Friendly Website Layouts</h3>
+            <a href="#"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+        <div class="box bg-fff">
+          <img src="images/projects-01.jpg" alt="">
+          <div class="down-content box-border">
+            <h3 class="c-dark">Digital Agency HTML Templates</h3>
+            <a href="#"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+        <div class="box bg-fff">
+          <img src="images/projects-02.jpg" alt="">
+          <div class="down-content box-border">
+            <h3 class="c-dark">Admin Dashboard CSS Templates</h3>
+            <a href="#"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="images/projects-03.jpg" alt="">
+          <div class="down-content box-border">
+            <h3 class="c-dark">Best Responsive Website Layouts</h3>
+            <a href="#"><i class="fa fa-link"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- End Projects -->
   </div>
 </body>
 

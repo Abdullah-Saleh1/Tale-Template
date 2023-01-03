@@ -36,6 +36,33 @@
 .bg-000 {
   background-color: #000;
 }
+.bg-primary {
+  background-color: #5b03e4; 
+}
+.bg-second-primary {
+  background-color: #c03afe; 
+}
+.bg-eee {
+  background-color: #eee; 
+}
+.c-fff {
+  color: #fff; 
+}
+.c-000 {
+  color: #000; 
+}
+.c-gray {
+  color: #afafaf;
+}
+.c-primary {
+  color: #5b03e4;
+}
+.c-second-primary {
+  color: #c03afe; 
+}
+.c-dark {
+  color: #2a2a2a; 
+}
 /* End Colors */
 /* Start Position */
 .p-relative {
@@ -91,6 +118,31 @@
   margin: auto; 
 }
 /* End Maring + Padding */
+/* Start Font */
+.fs-12 {
+  font-size: 12px;
+}
+.fs-14 {
+  font-size: 14px; 
+}
+.fs-15 {
+  font-size: 15; 
+}
+/* End Font */
+/* Start Border */
+.box-border {
+  border: 1px solid #f3d7ff; 
+}
+.border-eee {
+  border: 1px solid #eee;
+}
+.rad-25 {
+  border-radius: 25px;
+}
+.rad-50 {
+  border-radius: 50%; 
+}
+/* End Border */
 
 
 

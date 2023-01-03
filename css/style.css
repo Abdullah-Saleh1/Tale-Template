@@ -99,7 +99,6 @@ body {
 
 }
 .page {
-  position: relative; 
   overflow-x: hidden;
   height: 100vh; 
   min-height: 100vh; 
@@ -109,31 +108,6 @@ body {
   padding: 0 .75rem;
   width: clamp(16rem, 90vw, 85rem)
 }
-/* @media (min-width: 576px) {
-  .container {
-    max-width: 540px; 
-  }
-}
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px; 
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    max-width: 960px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    max-width: 1140px; 
-  }
-}
-@media (min-width: 1400px) {
-  .container {
-    max-width: 1320px; 
-  }
-} */
 img {
   max-width: 100%; 
   display: block; 
@@ -148,16 +122,13 @@ a {
   text-decoration: none; 
   color: var(--link-color);
 }
-
 /* End Global Rules */
 /* Start Header */
 .pre-header {
   height: 57px; 
-  background-color: #fff;
 }
 .pre-header .container {
-  padding-top: 15px; 
-  padding-bottom: 15px; 
+  padding: 15px 0;
 }
 .pre-header .head-contact a {
   color: #a586bc;
@@ -200,22 +171,18 @@ header {
   z-index: 100; 
 }
 header .container {
-  height: 110px; 
+  height: clamp(80px, 17vh, 110px); 
 }
 @media (max-width: 767px) {
   header .container > label {
     display: block; 
     width: 32px; 
     height: 28px;
-    position: relative; 
     cursor: pointer;
   }
   header .container > label span {
-    width: 100%; 
     height: 2px; 
-    background-color: #fff;
     transition: .3s; 
-    position: absolute;
     left: 0;
   }
   header .container > label span:nth-child(1) {
@@ -249,9 +216,6 @@ header .container {
     height: 336px;
   }
 }
-header .container > ul.d-flex {
-  height: 100%;
-}
 @media (max-width: 767px) {
   header .container > ul.d-flex {
     flex-direction: column; 
@@ -268,8 +232,7 @@ header .container > ul.d-flex {
 
 }
 header .container > ul > li {
-  /* padding: 0 30px; */
-  padding: 0 clamp(.625rem, 2vw, 2rem);
+  padding: 0 clamp(.625rem, 1.5vw, 2rem);
   display: grid; 
   place-items: center; 
   height: 100%;
@@ -429,7 +392,6 @@ header ul li .menu a {
 .landing .box > span:first-child {
   font-size: 20px;
   font-weight: bold;
-  color: #5b03e4;
   padding: 0 0 30px;
   margin-bottom: 20px;
   border-bottom: 2px solid #decdfa;
@@ -437,17 +399,9 @@ header ul li .menu a {
 .landing .box > h2 {
   font-size: 52px; 
   line-height: 70px; 
-  color: #2a2a2a; 
   margin-bottom: 20px; 
 }
-.landing .box > h2 span:first-of-type {
-  color: #5b03e4;
-}
-.landing .box > h2 span:last-of-type {
-  color: #c03afe;
-}
 .landing .box > p {
-  color: #afafaf; 
   line-height: 30px; 
   margin-bottom: 30px; 
   font-size: 15px; 
@@ -474,18 +428,11 @@ header ul li .menu a {
   }
 }
 .landing .box .between-flex > a {
-  color: #fff; 
   border-radius: 25px; 
   padding: 12px 30px;
   font-size: 14px;
   transition: .3s;
   letter-spacing: .5px; 
-}
-.landing .box .between-flex > a:nth-child(1) {
-  background-color: #5b03e4;
-}
-.landing .box .between-flex > a:nth-child(2) {
-  background-color: #c03afe;
 }
 .landing .box .between-flex > a:hover {
   opacity: .8;
@@ -495,26 +442,140 @@ header ul li .menu a {
   top: 70%; 
   transform: translateX(-50%)
 }
+/* End Landing */
 /* Start Services */
 .services {
+  margin: 130px 0; 
+  /* overflow: hidden;  */
+}
+.services::before, 
+.services::after {
+  position: absolute; 
+  z-index: -1; 
 }
 .services::before {
   content: url(../images/services-left.jpg);
-  position: absolute; 
+  bottom: -90px; 
   left: 0; 
-  top: 0;
-  z-index: -1; 
 }
-.services .container {
-
+.services::after {
+  content: url(../images/contact-left.jpg);
+  right: 0; 
+  bottom: -20px;
+  transform: scale(-1)
 }
 .services .content {
   flex-basis: 50%; 
   margin-left: auto; 
 }
-
+.services .content > h2 {
+  font-size: 30px;
+  padding-bottom: 30px;
+  margin-bottom: 25px;
+  padding-right: 40px;
+}
+.services .content > h2::before {
+  content: ''; 
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  width: 70px; 
+  height: 2px; 
+  background-color: #5b03e4;
+}
+.services .content > p {
+  margin-bottom: 30px; 
+}
+.services .grid {
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px
+}
+.services .box {
+  padding: 2em; 
+  border: 1px solid #f3d7ff; 
+  transition: .3s; 
+}
+.services .box:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2)
+}
+.services .box > h3 {
+  font-size: 20px;
+  margin-top: 24px; 
+  transition: .3s; 
+}
+.services .box:hover > h3 {
+  color: #5b03e4;
+}
 /* End Services */
-/* End Landing */
+/* Start Projects */
+.projects {
+  margin: 90px 0; 
+  padding: 30px 0; 
+}
+.projects .container {
+  margin-bottom: 4rem;
+}
+.projects .info h2 {
+  font-size: 30px;
+  padding-bottom: 30px; 
+  margin-bottom: 25px;
+}
+.projects .info h2::before {
+  content: ''; 
+  position: absolute; 
+  bottom: 0;
+  left: 0; 
+  width: 60px; 
+  height: 2px; 
+  background-color: #5b03e4;
+}
+.projects .info p {
+  padding-right: 50%;
+}
+.projects .info .chevrons {
+  bottom: 0; 
+  right: 15%; 
+  transform: translateY(50%); 
+  display: flex; 
+  gap: 20px;
+}
+.projects .info .chevrons i {
+  transition: .3s; 
+  font-size: 10px; 
+  width: 50px; 
+  height: 50px;
+  cursor: pointer; 
+}
+.projects .info .chevrons i:hover {
+  background-color: #5b03e4; 
+}
+.projects .images {
+  display: flex;
+  gap: 2rem; 
+}
+.projects .images .box {
+  /* 2rem is the gap */
+  flex: 1 0 calc(25% - 2rem);
+  transform: translateX(-50%)
+} 
+.projects .images img {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+.projects .images .down-content {
+  border-bottom-left-radius: 25px;   
+  border-bottom-right-radius: 25px; 
+} 
+.projects .images .down-content h3 {
+
+}
+.projects .images .down-content a {
+
+}
+.projects .images .down-content a i {
+
+}
+/* End Projects */
 /* Start Animations */
 @keyframes go-up {
   to {
