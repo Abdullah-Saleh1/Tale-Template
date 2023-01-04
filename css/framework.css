@@ -143,6 +143,10 @@
   border-radius: 50%; 
 }
 /* End Border */
-
+/* Start Shadows */
+.box-shadow {
+  box-shadow: 0 0 25px rgba(0, 0, 0, .2);
+}
+/* End Shadows */
 
 

@@ -106,7 +106,7 @@ body {
 .container {
   margin: 0 auto; 
   padding: 0 .75rem;
-  width: clamp(16rem, 90vw, 85rem)
+  width: clamp(20rem, 90vw, 85rem)
 }
 img {
   max-width: 100%; 
@@ -397,9 +397,10 @@ header ul li .menu a {
   border-bottom: 2px solid #decdfa;
 }
 .landing .box > h2 {
-  font-size: 52px; 
+  font-size: clamp(2rem, 3vw, 4rem); 
   line-height: 70px; 
-  margin-bottom: 20px; 
+  margin-bottom: .625em; 
+  padding-right: 2.5em; 
 }
 .landing .box > p {
   line-height: 30px; 
@@ -413,6 +414,11 @@ header ul li .menu a {
 }
 .landing .box .between-flex {
   gap: 3.5rem;
+}
+@media (max-width: 767px) {
+  .landing .box .between-flex {
+    gap: 1.5rem; 
+  }
 }
 @media (max-width: 992px) {
   .landing .box > span:first-child {
@@ -433,6 +439,13 @@ header ul li .menu a {
   font-size: 14px;
   transition: .3s;
   letter-spacing: .5px; 
+  white-space: nowrap;
+}
+@media (max-width: 767px) {
+  .landing .box .between-flex > a {
+    padding: 12px 15px;
+    font-size: 12px; 
+  }
 }
 .landing .box .between-flex > a:hover {
   opacity: .8;
@@ -468,6 +481,11 @@ header ul li .menu a {
   flex-basis: 50%; 
   margin-left: auto; 
 }
+@media (max-width: 992px) {
+  .services .content {
+    flex-basis: 100%; 
+  }
+}
 .services .content > h2 {
   font-size: 30px;
   padding-bottom: 30px;
@@ -489,6 +507,11 @@ header ul li .menu a {
 .services .grid {
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 20px
+}
+@media (max-width: 992px) {
+  .services .grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr))
+  }
 }
 .services .box {
   padding: 2em; 
@@ -513,7 +536,7 @@ header ul li .menu a {
   padding: 30px 0; 
 }
 .projects .container {
-  margin-bottom: 4rem;
+  margin-bottom: 7rem;
 }
 .projects .info h2 {
   font-size: 30px;
@@ -531,6 +554,7 @@ header ul li .menu a {
 }
 .projects .info p {
   padding-right: 50%;
+  font-size: 15px;
 }
 .projects .info .chevrons {
   bottom: 0; 
@@ -538,12 +562,28 @@ header ul li .menu a {
   transform: translateY(50%); 
   display: flex; 
   gap: 20px;
+  width: fit-content; 
+}
+@media (max-width: 767px) {
+  .services .content > h2::before, 
+  .projects .info h2::before {
+    left: 50%;
+    transform: translateX(-50%)
+  }
+  .projects .info p {
+    padding-right: 0;
+  }
+  .projects .info .chevrons {
+    top: calc(100% + 30px); 
+    left: 50%; 
+    transform: translateX(-50%); 
+  }
 }
 .projects .info .chevrons i {
   transition: .3s; 
   font-size: 10px; 
-  width: 50px; 
-  height: 50px;
+  width: 45px; 
+  height: 45px;
   cursor: pointer; 
 }
 .projects .info .chevrons i:hover {
@@ -555,25 +595,43 @@ header ul li .menu a {
 }
 .projects .images .box {
   /* 2rem is the gap */
-  flex: 1 0 calc(25% - 2rem);
-  transform: translateX(-50%)
+  flex: 1 0 calc(50% - 2rem);
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
 } 
+@media (min-width: 992px) {
+  .projects .images .box {
+    flex: 1 0 calc(33.33% - 20px);
+    transform: translateX(0)
+  }
+}
+@media (min-width: 1200px) {
+  .projects .images .box {
+      flex: 1 0 calc(25% - 2rem);
+      transform: translateX(-50%)
+  }
+}
 .projects .images img {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
+  width: 100%;
 }
 .projects .images .down-content {
   border-bottom-left-radius: 25px;   
   border-bottom-right-radius: 25px; 
+  padding: clamp(2rem, 2.5vw, 3rem);
+  gap: 2rem;
+  flex: 1; 
 } 
 .projects .images .down-content h3 {
-
+  font-size: 20px;
 }
 .projects .images .down-content a {
-
-}
-.projects .images .down-content a i {
-
+  /* I'm Not Using Width Because The Flex Shrink Is On, It Will Shirnk Down When The Size Is Smaller */
+  /* width: 50px;  */
+  min-width: 50px; 
+  height: 50px;
 }
 /* End Projects */
 /* Start Animations */
