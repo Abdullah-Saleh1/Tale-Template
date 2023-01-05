@@ -124,6 +124,27 @@ a {
 }
 /* End Global Rules */
 /* Start Header */
+.special-title {
+  position: relative;
+  font-size: clamp(2rem, 3vw, 4rem); 
+  margin-bottom: .625em; 
+  color: #2a2a2a; 
+}
+.special-title::before {
+  content: ''; 
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  width: 70px; 
+  height: 2px; 
+  background-color: #5b03e4;
+}
+.special-title span:first-child {
+  color: #5b03e4;
+}
+.special-title span:last-child {
+  color: #c03afe;
+}
 .pre-header {
   height: 57px; 
 }
@@ -396,11 +417,14 @@ header ul li .menu a {
   margin-bottom: 20px;
   border-bottom: 2px solid #decdfa;
 }
-.landing .box > h2 {
-  font-size: clamp(2rem, 3vw, 4rem); 
+.landing .box > .special-title {
+  font-size: clamp(2rem, 3.5vw, 4rem); 
   line-height: 70px; 
   margin-bottom: .625em; 
   padding-right: 2.5em; 
+}
+.landing .box > .special-title::before {
+  display: none;
 }
 .landing .box > p {
   line-height: 30px; 
@@ -425,7 +449,7 @@ header ul li .menu a {
     margin: 0 auto 20px;
   }
   /* I'm using :is psuedo class to give more specificity to overriding padding-right */
-  .landing .box > :is(h2, p) {
+  .landing .box > :is(.special-title, p) {
     text-align: center; 
     padding-right: 0;
   }
@@ -486,20 +510,11 @@ header ul li .menu a {
     flex-basis: 100%; 
   }
 }
-.services .content > h2 {
+.services .content > .special-title {
   font-size: 30px;
   padding-bottom: 30px;
   margin-bottom: 25px;
-  padding-right: 40px;
-}
-.services .content > h2::before {
-  content: ''; 
-  position: absolute; 
-  bottom: 0; 
-  left: 0;
-  width: 70px; 
-  height: 2px; 
-  background-color: #5b03e4;
+  line-height: 1.5;
 }
 .services .content > p {
   margin-bottom: 30px; 
@@ -642,5 +657,3 @@ header ul li .menu a {
   }
 }
 /* End Animations */
-
-
