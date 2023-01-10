@@ -27,6 +27,10 @@ body {
   background-color: var(--body-bg); 
   line-height: var(--body-line-height);
 }
+::selection {
+  color: #fff; 
+  background-color: #5b03e4; 
+}
 ::-webkit-scrollbar {
   width: 15px;
 }
@@ -699,7 +703,7 @@ header ul li .menu a {
 .contact .box .contact-us > .box-border {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  padding: 4rem; 
+  padding: clamp(1rem, 3vw, 4rem); 
 }
 .contact .box .contact-us h2 {
   font-size: 30px; 
@@ -782,7 +786,7 @@ header ul li .menu a {
 }
 .contact .box .info {
   background-image: linear-gradient(90deg, rgba(85,0,227,1) 0%, rgba(198,61,255,1) 100%);
-  padding: 4rem; 
+  padding: clamp(1rem, 3vw, 4rem); 
   border-bottom-left-radius: 25px;
   border-bottom-right-radius: 25px;
   gap: 2rem; 
@@ -794,8 +798,9 @@ header ul li .menu a {
 }
 .contact .box .info > * {
   flex: 1; 
+  flex-direction: column; 
 }
-.contact .box .info div i {
+.contact .box .info a i {
   font-size: 30px; 
   margin-bottom: 10px; 
 }
@@ -803,9 +808,6 @@ header ul li .menu a {
 /* Start Footer */
 footer {
   padding: 4rem 0;
-}
-footer p {
-  
 }
 /* End Footer */
 /* Start Animations */
