@@ -73,6 +73,11 @@ a {
   text-decoration: none; 
   color: var(--link-color);
 }
+p {
+  font-size: 15px;
+  line-height: 30px;
+  color: #afafaf;
+}
 /* End Global Rules */
 /* Start Header */
 .special-title {
@@ -636,7 +641,7 @@ header ul li .menu a {
   height: 10px; 
   background-color: #f9ebff;
 }
-.infos .box > .content .progress span::before {
+:where(.infos, .video-info) .content .progress span::before {
   content: attr(data-progress);
   position: absolute;
   left: 100%;
@@ -810,6 +815,103 @@ footer {
   padding: 4rem 0;
 }
 /* End Footer */
+/* Start Landing-About */
+.section {
+  padding-top: 30px;
+  margin-top: 90px;
+}
+.landing-about::before, 
+.landing-about::after {
+  display: none; 
+}
+.landing-about h2 {
+  padding-right: 0 !important; 
+}
+@media (max-width: 992px) {
+  .landing-about .container {
+    flex-direction: column; 
+    gap: 4rem; 
+  }
+}
+.landing-about .container img {
+  animation: go-up 2s ease-in-out .5s forwards; 
+  opacity: 0; 
+  transform: translateY(30px); 
+  min-width: 400px; 
+}
+@media (max-width: 767px) {
+  .landing-about .container img {
+    min-width: auto; 
+  }
+}
+.landing-about .container .box {
+  padding: 0; 
+  background-color: transparent; 
+  box-shadow: none;
+}
+/* End Landing-About */
+/* Start Video Info */
+.video-info {
+  background-image: url(../images/video-bg.jpg);
+  padding-bottom: 60px; 
+}
+.video-info .container {
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+@media (max-width: 992px) {
+  .video-info .container {
+    grid-template-columns: minmax(200px, 1fr);
+  }
+}
+.video-info .image {
+  transform: translateY(-5rem);
+  height: fit-content; 
+}
+.video-info .image a {
+  position: absolute; 
+  left: 50%; 
+  top: 50%; 
+  transform: translate(-50%, -50%);
+  display: grid; 
+  place-items: center; 
+  width: 40px;
+  height: 40px; 
+  background-color: #fff; 
+  border-radius: 50%;
+}
+.video-info .content h2 {
+  color: #fff; 
+  font-size: clamp(2rem, 2.5vw, 3.5rem);
+  padding: 60px 0 30px 0;
+}
+@media (max-width: 992px) {
+  .video-info .container {
+    gap: 0; 
+  }
+  .video-info .content h2 {
+    padding-top: 0; 
+  }
+}
+.video-info .content p {
+  margin-bottom: 30px; 
+}
+.video-info .content h2::before {
+  background-color: #fff; 
+}
+.video-info .content .field .progress {
+  background-color: rgba(249, 235, 255, 0.1); 
+  height: 10px;
+}
+.video-info .content .progress span::before {
+  background-color: transparent; 
+  font-size: 1rem; 
+  font-weight: bold;
+}
+.video-info .content .progress span::after {
+  display: none;
+}
+/* End Video Info */
 /* Start Animations */
 @keyframes go-up {
   to {
