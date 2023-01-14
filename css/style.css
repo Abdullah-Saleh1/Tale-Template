@@ -192,8 +192,7 @@ header .container {
   header .container > input:checked + label + ul.d-flex:has(.p-relative input:checked) {
     height: 336px;
   }
-}
-@media (max-width: 767px) {
+
   header .container > ul.d-flex {
     flex-direction: column; 
     position: absolute; 
@@ -206,14 +205,17 @@ header .container {
     margin: 0 auto; 
     font-size: 14px;
   }
-
 }
-header .container > ul > li {
+header .container > ul > li :where(a, span) {
   padding: 0 clamp(.625rem, 1.5vw, 2rem);
   display: grid; 
   place-items: center; 
   height: 100%;
   cursor: pointer
+}
+header .container > ul > li span {
+  display: flex; 
+  gap: 10px; 
 }
 @media (max-width: 767px) {
   header .container > ul.d-flex > li:not(:last-child) {
@@ -234,17 +236,26 @@ header .container > ul > li {
     font-size: 12px; 
     opacity: 1 !important;
   }
+  header div.container > ul > li span > span {
+    padding: 0;
+    /* To Center Inner span */
+    justify-content: center; 
+  }
   header .container > ul > li :where(a:hover, span:hover) {
     background: #eee !important;
     color: #5b03e4 !important;
   }
+  header .container > ul > li span > span {
+    background-color: transparent !important;
+    color: #000;
+  }
 }
 @media (max-width: 992px) {
-  header .container > ul > li {
+  header .container > ul > li a {
     padding: 0 10px;
   }
 }
-header ul li:nth-child(4) {
+header ul li:nth-child(4) a {
   padding: 0 30px 0 10px;
 }
 header ul :where(a, span) {
@@ -254,11 +265,16 @@ header ul :where(a, span) {
   letter-spacing: 1px;
   transition: .3s; 
 }
-header ul li:hover :where(a, span) {
+header ul li a:hover, 
+header ul li span:hover {
   opacity: .8;
 }
 header ul li i {
   font-size: 12px;
+  transition: .3s; 
+}
+header ul li input:checked + label span i {
+  transform: rotate(180deg)
 }
 header ul li .menu {
   transition: .3s; 
@@ -276,14 +292,18 @@ header ul li .menu {
     border-bottom-right-radius: 10px; 
     overflow: hidden;
     box-shadow: 0 2px 28px 0 rgb(0 0 0 / 6%);
+    visibility: hidden; 
   }
-}
-header ul .p-relative > label {
-  cursor: pointer; 
+  header ul li input:checked + label .menu {
+    visibility: visible; 
+    transform: translateY(0); 
+    opacity: 1;
+  }
 }
 @media (max-width: 767px) {
   header ul .p-relative > label {
     display: block;
+    cursor: pointer; 
   }
   header ul .p-relative > label .menu {
     height: 0;
@@ -294,11 +314,6 @@ header ul .p-relative > label {
     overflow: visible; 
     height: 84px; 
   }
-}
-header ul .p-relative > input:checked + label .menu {
-  z-index: 1; 
-  opacity: 1; 
-  transform: translateY(0);
 }
 header ul li .menu li {
   background-color: #eee;
