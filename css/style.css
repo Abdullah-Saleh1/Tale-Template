@@ -15,6 +15,7 @@
   margin: 0; 
   padding: 0; 
   scroll-behavior: smooth; 
+  scroll-padding-block: 6rem;
 }
 *::before, 
 *::after {
@@ -41,7 +42,6 @@ body {
 }
 ::-webkit-scrollbar-track {
   background-color: #fff;
-  box-shadow: 0 0 15px rgba(0, 0, 0, .2)
 }
 ::-webkit-scrollbar-thumb {
   background-color: #6610f2;

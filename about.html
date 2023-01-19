@@ -49,7 +49,7 @@
         </div>
       </div>
     </main>
-    <header>
+    <header role="navigation">
       <div class="container between-flex p-relative">
         <img src="images/logo.png" alt="">
         <input type="checkbox" id="burger-icon" class="d-none">
@@ -58,14 +58,13 @@
           <span class="p-absolute bg-fff w-full"></span>
           <span class="p-absolute bg-fff w-full"></span>
         </label>
-        <ul class="d-flex h-full">
+        <ul class="d-flex h-full" role="navigation">
           <li><a href="index.html#top">Home</a></li>
           <li><a href="index.html#services">Services</a></li>
           <li><a href="index.html#projects">Projects</a></li>
           <li class="p-relative">
             <input type="checkbox" id="drop-menu" class="d-none">
             <label for="drop-menu" class="w-full h-full center-flex">
-              <!-- <a href="#" id="">Pages <i class="fa-solid fa-chevron-down"></i></a> -->
               <span>Pages <i class="fa-solid fa-chevron-down fs-12"></i></span>
               <div class="menu">
                 <ul>
@@ -118,21 +117,21 @@
           </p>
           <div class="field mb-20">
             <h3 class="fs-15 c-fff mb-10">SEO Marketing</h3>
-            <div class="progress rad-25 w-full">
+            <div class="progress rad-25 w-full" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
               <span class="fill p-relative d-block bg-primary h-full rad-25" data-progress="90%"
                 style="width: 90%"></span>
             </div>
           </div>
           <div class="field mb-20">
             <h3 class="fs-15 c-fff mb-10">Digital Media</h3>
-            <div class="progress rad-25 w-full">
+            <div class="progress rad-25 w-full" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
               <span class="fill p-relative d-block bg-primary h-full rad-25" data-progress="80%"
                 style="width: 80%"></span>
             </div>
           </div>
           <div class="field mb-20">
             <h3 class="fs-15 c-fff mb-10">Social Media Managing</h3>
-            <div class="progress rad-25 w-full">
+            <div class="progress rad-25 w-full" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
               <span class="fill p-relative d-block bg-primary h-full rad-25" data-progress="95%"
                 style="width: 95%"></span>
             </div>
