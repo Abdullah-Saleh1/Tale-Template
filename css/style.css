@@ -966,6 +966,45 @@ footer {
 .happy-clients p {
   margin-bottom: 60px; 
 }
+.happy-clients form {
+  min-height: 500px; 
+}
+.happy-clients form input {
+  display: none;
+}
+.happy-clients form .label-holder {
+  padding: 1.5rem; 
+  margin-bottom: 4rem; 
+}
+.happy-clients form .label-holder label {
+  display: block;
+  flex: 1; 
+  text-align: center; 
+  cursor: pointer;
+  font-size: 20px; 
+  font-weight: bold; 
+  color: #2a2a2a;
+  transition: .3s;
+}
+.happy-clients form .label-holder label:not(:last-child) {
+  border-right: 1px solid #f3d7ff;
+}
+.happy-clients form > input[id="project-intro"]:checked ~ .label-holder label[for="project-intro"] {
+  color: #5b03e4;
+}
+.happy-clients form > input[id="work-dev"]:checked ~ .label-holder label[for="work-dev"] {
+  color: #5b03e4;
+}
+.happy-clients form > input[id="data"]:checked ~ .label-holder label[for="data"] {
+  color: #5b03e4;
+}
+.happy-clients form > input[id="project-outro"]:checked ~ .label-holder label[for="project-outro"] {
+  color: #5b03e4;
+}
+.happy-clients form .content:not(.project-intro) {
+  opacity: 0; 
+  transition: .3s;
+}
 /* End Happy Clients */
 /* Start Animations */
 @keyframes go-up {
