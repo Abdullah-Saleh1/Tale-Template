@@ -37,7 +37,7 @@ body {
 }
 @media (max-width: 767px) {
   ::-webkit-scrollbar {
-    width: 10px;
+    width: 5px;
   }
 }
 ::-webkit-scrollbar-track {
@@ -578,7 +578,6 @@ header ul li .menu a {
   background-color: #5b03e4; 
 }
 .projects .images {
-  display: flex;
   gap: 2rem; 
 }
 .projects .images .box {
@@ -588,6 +587,11 @@ header ul li .menu a {
   display: flex;
   flex-direction: column;
 } 
+@media (max-width: 600px) {
+  .projects .images .box {
+    flex: 1 0 100%;
+  }
+}
 @media (min-width: 992px) {
   .projects .images .box {
     flex: 1 0 calc(33.33% - 20px);
@@ -604,6 +608,7 @@ header ul li .menu a {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   width: 100%;
+  height: clamp(350px, 25vw, 400px);
 }
 .projects .images .down-content {
   border-bottom-left-radius: 25px;   
@@ -772,6 +777,7 @@ header ul li .menu a {
   transform: translateY(-50%);
   transition: .3s; 
   font-size: 14px; 
+  pointer-events: none;
 }
 .contact .box .contact-us form div :is(input:focus, textarea:focus) + label, 
 .contact .box .contact-us form div :is(input:valid, textarea:valid) + label {
@@ -869,6 +875,7 @@ footer {
 /* Start Video Info */
 .video-info {
   background-image: url(../images/video-bg.jpg);
+  background-size: 100%; 
   padding-bottom: 60px; 
 }
 .video-info .container {
@@ -916,7 +923,7 @@ footer {
   background-color: #fff; 
 }
 .video-info .content .field .progress {
-  background-color: rgba(249, 235, 255, 0.1); 
+  background-color: rgba(249, 235, 255, 0.2); 
   height: 10px;
 }
 .video-info .content .progress span::before {
@@ -928,6 +935,38 @@ footer {
   display: none;
 }
 /* End Video Info */
+/* Start Happy Clients */
+.happy-clients::before, 
+.happy-clients::after {
+  position: absolute; 
+  z-index: -1; 
+  width: 103px; 
+  height: 464px; 
+}
+.happy-clients::before {
+  content: url(../images/contact-left.jpg);
+  z-index: -1; 
+  top: -90px; 
+  left: 0;
+}
+.happy-clients::after {
+  content: url(../images/contact-left.jpg);
+  bottom: -90px; 
+  right: 0; 
+  transform: scale(-1);
+}
+.happy-clients h2 {
+  padding-bottom: 30px; 
+  margin-bottom: 30px; 
+}
+.happy-clients .container > h2::before {
+  left: 50%; 
+  transform: translateX(-50%);
+}
+.happy-clients p {
+  margin-bottom: 60px; 
+}
+/* End Happy Clients */
 /* Start Animations */
 @keyframes go-up {
   to {

@@ -25,33 +25,33 @@
       <div class="pre-header hide-mobile bg-fff">
         <div class="container between-flex">
           <div class="head-contact d-flex bg-fff">
-            <a href="#">
+            <a href="#" aria-label="The Phone Number">
               <i class="fa-solid fa-phone"></i>
               <span>+000 1234 5678</span>
             </a>
-            <a href="#">
+            <a href="#" aria-label="The Email">
               <i class="fa-solid fa-envelope"></i>
               <span>infocompany@email.com</span>
             </a>
-            <a href="#">
+            <a href="#" aria-label="The Location">
               <i class="fa-solid fa-location-pin"></i>
               <span>St. London 54th Bull</span>
             </a>
           </div>
           <div class="icons">
             <ul class="d-flex">
-              <li><a href="#"><i class="fa-brands fa-facebook"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
-              <li><a href="#"><i class="fa-brands fa-google-plus"></i></a></li>
+              <li><a href="#" aria-lable="Follow Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+              <li><a href="#" aria-lable="Follow Twitter"><i class="fa-brands fa-twitter"></i></a></li>
+              <li><a href="#" aria-lable="Follow Linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+              <li><a href="#" aria-lable="Follow Googl Plus"><i class="fa-brands fa-google-plus"></i></a></li>
             </ul>
           </div>
         </div>
       </div>
     </main>
-    <header role="navigation">
+    <header>
       <div class="container between-flex p-relative">
-        <img src="images/logo.png" alt="">
+        <img src="images/logo.png" alt="logo" width="112px" height="59px" loading="lazy">
         <input type="checkbox" id="burger-icon" class="d-none">
         <label class="p-relative" for="burger-icon">
           <span class="p-absolute bg-fff w-full"></span>
@@ -87,7 +87,8 @@
           <span class="d-block w-fit c-primary">SEO DIGITAL AGENCY</span>
           <h2 class="special-title">Discover More <span>About Us</span></h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor incididunt ut labore et dolore.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor incididunt ut labore et
+            dolore.
           </p>
           <div class="between-flex p-relative w-fit">
             <a href="#" class="d-block bg-primary c-fff">Discover More</a>
@@ -108,38 +109,126 @@
           <a href="https://youtube.com" target="_blank">
             <i class="fa-solid fa-play c-dark"></i>
           </a>
-          <img src="images/video-thumb.jpg" alt="" class="w-full h-full rad-25">
+          <img src="images/video-thumb.jpg" alt="" class="w-full h-full rad-25" loading="lazy">
         </div>
         <div class="content">
           <h2 class="special-title">Detailed Information On What We Do & Who We Are</h2>
           <p class="c-fff">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor incididunt ut labore et dolore dolor.
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor incididunt ut labore et
+            dolore dolor.
           </p>
           <div class="field mb-20">
-            <h3 class="fs-15 c-fff mb-10">SEO Marketing</h3>
-            <div class="progress rad-25 w-full" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
+            <h3 class="fs-15 c-fff mb-10" id="marketing">SEO Marketing</h3>
+            <div class="progress rad-25 w-full" role="progressbar" aria-labelledby="marketing" aria-valuenow="90"
+              aria-valuemin="0" aria-valuemax="100">
               <span class="fill p-relative d-block bg-primary h-full rad-25" data-progress="90%"
                 style="width: 90%"></span>
             </div>
           </div>
           <div class="field mb-20">
-            <h3 class="fs-15 c-fff mb-10">Digital Media</h3>
-            <div class="progress rad-25 w-full" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100">
+            <h3 class="fs-15 c-fff mb-10" id="digital-media">Digital Media</h3>
+            <div class="progress rad-25 w-full" role="progressbar" aria-labelledby="digital-media" aria-valuenow="80"
+              aria-valuemin="0" aria-valuemax="100">
               <span class="fill p-relative d-block bg-primary h-full rad-25" data-progress="80%"
                 style="width: 80%"></span>
             </div>
           </div>
           <div class="field mb-20">
-            <h3 class="fs-15 c-fff mb-10">Social Media Managing</h3>
-            <div class="progress rad-25 w-full" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">
+            <h3 class="fs-15 c-fff mb-10" id="social-media">Social Media Managing</h3>
+            <div class="progress rad-25 w-full" role="progressbar" aria-labelledby="social-media" aria-valuenow="95"
+              aria-valuemin="0" aria-valuemax="100">
               <span class="fill p-relative d-block bg-primary h-full rad-25" data-progress="95%"
                 style="width: 95%"></span>
             </div>
           </div>
+        </div>
       </div>
     </div>
     <!-- End Details -->
-  </div>
+    <!-- Start happy clients -->
+    <div class="happy-clients section p-relative">
+      <div class="container">
+        <h2 class="special-title txt-c">Our 4 Steps <span>To Success</span> & <span>Happy Clients</span></h2>
+        <p class="txt-c">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers.</p>
+        <form class="p-relative">
+          <input type="radio" name="content" id="project-intro">
+          <input type="radio" name="content" id="work-dev">
+          <input type="radio" name="content" id="data">
+          <input type="radio" name="content" id="project-outro">
+          <div>
+            <label for="project-intro">Projects Introduction</label>
+            <label for="work-dev">Work Development</label>
+            <label for="data">Data Analysis</label>
+            <label for="project-outro">Projects Finishing</label>
+          </div>
+          <div class="project-intro content p-absolute d-flex align-center">
+            <div>
+              <h2 class="special-title">Best CSS Templates for you</h2>
+              <p>Tale is the best SEO agency website template using Bootstrap v5.2.2 CSS for your company. It is a free download provided by TemplateMo. There are 3 HTML pages, <a href="#top">Home</a>, <a href="about.html">About</a>, and <a href="faqs.html">FAQ</a>.</p>
+              <div class="info d-flex">
+                <span class="d-block bg-primary c-fff rad-25">Website Design</span>
+                <span class="d-block bg-primary c-fff rad-25">User Interface</span>
+                <span class="d-block bg-primary c-fff rad-25">User Experience</span>
+                <span class="d-block bg-primary c-fff rad-25">Digital Agency</span>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor incididunt ut labore et dolore dolor dolor sit amet, consectetur adipicing elit, sed doers eiusmod.</p>
+            </div>
+            <div class="image">
+              <img src="images/happyclient-01-removebg-preview.png" alt="" loading="lazy">
+            </div>
+          </div>
+          <div class="work-dev content p-absolute d-flex align-center">
+            <div>
+              <h2 class="special-title">Detailed Information On What We Do</h2>
+              <p>You are free to use this template for any purpose. You are not allowed to redistribute the downloadable ZIP file of Tale SEO Template on any other template website. Please contact us. Thank you.</p>
+              <div class="info d-flex">
+                <span class="d-block bg-primary c-fff rad-25">HTML CSS</span>
+                <span class="d-block bg-primary c-fff rad-25">Bootstrap 5</span>
+                <span class="d-block bg-primary c-fff rad-25">TemplateMo</span>
+                <span class="d-block bg-primary c-fff rad-25">Development</span>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor incididunt ut labore et dolore dolor dolor sit amet, consectetur adipicing elit, sed doers eiusmod.</p>
+            </div>
+            <div class="image">
+              <img src="images/happyclient-01-removebg-preview.png" alt="" loading="lazy">
+            </div>
+          </div>
+          <div class="data content p-absolute d-flex align-center">
+            <div>
+              <h2 class="special-title">Responsive HTML CSS Templates</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod kent tempor incididunt ut labore et dolore dolor.</p>
+              <div class="info d-flex">
+                <span class="d-block bg-primary c-fff rad-25">SEO Trends</span>
+                <span class="d-block bg-primary c-fff rad-25">Digital Agency</span>
+                <span class="d-block bg-primary c-fff rad-25">Best Template</span>
+                <span class="d-block bg-primary c-fff rad-25">Development</span>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor incididunt ut labore et dolore dolor dolor sit amet, consectetur adipicing elit, sed doers eiusmod.</p>
+            </div>
+            <div class="image">
+              <img src="images/happyclient-01-removebg-preview.png" alt="" loading="lazy">
+            </div>
+          </div>
+          <div class="project-outro content p-absolute d-flex align-center">
+            <div>
+              <h2 class="special-title">Detailed Information about SEO Techniques</h2>
+              <p>Tale is the best SEO agency website template using Bootstrap v5.2.2 CSS for your company. It is a free download provided by TemplateMo. There are 3 HTML pages, <a href="#top">Home</a>, <a href="about.html">About</a>, and <a href="faqs.html">FAQ</a>.</p>
+              <div class="info d-flex">
+                <span class="d-block bg-primary c-fff rad-25">Data Analysis</span>
+                <span class="d-block bg-primary c-fff rad-25">SEO Trends</span>
+                <span class="d-block bg-primary c-fff rad-25">Templates</span>
+                <span class="d-block bg-primary c-fff rad-25">Research</span>
+              </div>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doers eiusmod tempor incididunt ut labore et dolore dolor dolor sit amet, consectetur adipicing elit, sed doers eiusmod.</p>
+            </div>
+            <div class="image">
+              <img src="images/happyclient-01-removebg-preview.png" alt="" loading="lazy">
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- End happy clients -->
 </body>
 
 </html>
