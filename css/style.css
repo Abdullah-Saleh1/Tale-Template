@@ -834,7 +834,10 @@ header ul li .menu a {
 /* End Contact */
 /* Start Footer */
 footer {
-  padding: 4rem 0;
+  padding: 2.5rem 0;
+}
+footer p {
+  font-weight: 500; 
 }
 /* End Footer */
 /* Start Landing-About */
@@ -955,57 +958,142 @@ footer {
   right: 0; 
   transform: scale(-1);
 }
-.happy-clients h2 {
+.happy-clients h2, 
+.happy-clients form .content div h2 {
   padding-bottom: 30px; 
   margin-bottom: 30px; 
+  font-size: min(5vw, 40px);
+  font-size: clamp(25px, 5vw, 2rem);
 }
 .happy-clients .container > h2::before {
   left: 50%; 
   transform: translateX(-50%);
 }
-.happy-clients p {
+.happy-clients .container > p {
   margin-bottom: 60px; 
 }
 .happy-clients form {
-  min-height: 500px; 
+  min-height: 550px; 
+}
+@media (max-width: 992px) {
+  .happy-clients form {
+    min-height: 650px;
+  }
+}
+@media (max-width: 767px) {
+  .happy-clients form {
+    min-height: 750px;
+  }
+}
+@media (max-width: 576px) {
+  .happy-clients form {
+    min-height: 800px; 
+  }
 }
 .happy-clients form input {
   display: none;
 }
 .happy-clients form .label-holder {
-  padding: 1.5rem; 
+  padding: clamp(1rem, 2vw, 1.5rem);
   margin-bottom: 4rem; 
+}
+@media (max-width: 992px) {
+  .happy-clients form .label-holder {
+    flex-direction: column; 
+    gap: 1.5rem; 
+    align-items: stretch; 
+  }
+  div.happy-clients form.p-relative div.label-holder > label {
+    font-size: 1rem; 
+    border: none; 
+  }
 }
 .happy-clients form .label-holder label {
   display: block;
+  height: fit-content; 
   flex: 1; 
   text-align: center; 
   cursor: pointer;
   font-size: 20px; 
   font-weight: bold; 
   color: #2a2a2a;
+  white-space: nowrap; 
   transition: .3s;
 }
 .happy-clients form .label-holder label:not(:last-child) {
   border-right: 1px solid #f3d7ff;
 }
-.happy-clients form > input[id="project-intro"]:checked ~ .label-holder label[for="project-intro"] {
-  color: #5b03e4;
-}
-.happy-clients form > input[id="work-dev"]:checked ~ .label-holder label[for="work-dev"] {
-  color: #5b03e4;
-}
-.happy-clients form > input[id="data"]:checked ~ .label-holder label[for="data"] {
-  color: #5b03e4;
-}
+.happy-clients form > input[id="project-intro"]:checked ~ .label-holder label[for="project-intro"], 
+.happy-clients form > input[id="work-dev"]:checked ~ .label-holder label[for="work-dev"], 
+.happy-clients form > input[id="data"]:checked ~ .label-holder label[for="data"], 
 .happy-clients form > input[id="project-outro"]:checked ~ .label-holder label[for="project-outro"] {
   color: #5b03e4;
 }
-.happy-clients form .content:not(.project-intro) {
+.happy-clients form .content {
+  visibility: hidden;
   opacity: 0; 
   transition: .3s;
+  transform: translateX(30px);
+  gap: 3rem; 
+}
+.happy-clients form .content > :first-child {
+  flex-basis: 80%; 
+}
+.happy-clients form > input[id="project-intro"]:checked ~ .project-intro, 
+.happy-clients form > input[id="work-dev"]:checked ~ .work-dev, 
+.happy-clients form > input[id="data"]:checked ~ .data, 
+.happy-clients form > input[id="project-outro"]:checked ~ .project-outro {
+  visibility: visible;
+  opacity: 1;
+  transform: translateX(0);
+  transition-delay: .3s; 
+}
+.happy-clients form .content div .info {
+  margin: 30px 0; 
+  gap: 30px 20px;
+  flex-wrap: wrap; 
+}
+.happy-clients form .content div .info span {
+  padding: 0 20px; 
+  height: 40px; 
+}
+@media (max-width: 992px) {
+  .happy-clients form .content > :first-child {
+    flex-basis: 100%; 
+  }
+  .happy-clients form .content .image {
+    display: none; 
+  }
 }
 /* End Happy Clients */
+/* Start Cta */
+.cta {
+  margin-top: 120px; 
+  background-image: url(../images/cta-bg.jpg); 
+  background-size: cover; 
+  padding: 6rem 0;
+}
+.cta h2 {
+  flex-basis: 60%; 
+  font-size: 30px; 
+  line-height: 44px;
+}
+.cta a {
+  padding: 12px 30px; 
+  transition: .3s; 
+}
+.cta a:hover {
+  opacity: .8;
+}
+/* End Cta */
+/* Start Footer */
+footer a {
+  transition: .3s; 
+}
+footer p a:hover {
+  color: #5b03e4;
+}
+/* Start End */
 /* Start Animations */
 @keyframes go-up {
   to {
