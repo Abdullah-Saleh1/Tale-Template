@@ -987,7 +987,7 @@ footer p {
 }
 @media (max-width: 576px) {
   .happy-clients form {
-    min-height: 800px; 
+    min-height: 900px; 
   }
 }
 .happy-clients form input {
@@ -1072,6 +1072,15 @@ footer p {
   background-image: url(../images/cta-bg.jpg); 
   background-size: cover; 
   padding: 6rem 0;
+}
+@media (max-width: 992px) {
+  .cta .container {
+    flex-direction: column; 
+    gap: 2rem; 
+  }
+  .cta h2 {
+    text-align: center; 
+  }
 }
 .cta h2 {
   flex-basis: 60%; 
