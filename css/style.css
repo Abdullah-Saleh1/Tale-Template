@@ -1103,6 +1103,20 @@ footer p a:hover {
   color: #5b03e4;
 }
 /* Start End */
+/* Start Landing Faqs */
+.landing-faqs::before {
+  top: 0; 
+}
+.landing-faqs::after {
+  display: none;
+}
+.landing-faqs .container .box h2 {
+  padding-right: 0;
+}
+.landing-faqs .box h2 span:last-child {
+  color: #5b03e4;
+}
+/* End Landing Faqs */
 /* Start Animations */
 @keyframes go-up {
   to {
